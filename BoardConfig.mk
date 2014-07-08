@@ -198,3 +198,6 @@ TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 
 # Don't build official CM updaters
 DISABLE_OTA := true
+
+# External apps on SD
+TARGET_EXTERNAL_APPS = sdcard0
