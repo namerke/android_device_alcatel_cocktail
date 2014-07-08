@@ -1,0 +1,24 @@
+From 97fa9bb4360672a98562b8256ee743b6b0de96c5 Mon Sep 17 00:00:00 2001
+From: bagyusz <phelyx92@gmail.com>
+Date: Fri, 18 Apr 2014 18:33:47 +0200
+Subject: [PATCH] gps patch
+
+Change-Id: I278f535541851ffe417659baa6315eb7b71a7ec6
+---
+ gps/gps.conf_EU_SUPL | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/gps/gps.conf_EU_SUPL b/gps/gps.conf_EU_SUPL
+index a0e2a7d..6a457d4 100644
+--- a/gps/gps.conf_EU_SUPL
++++ b/gps/gps.conf_EU_SUPL
+@@ -3,3 +3,6 @@ XTRA_SERVER_2=http://xtra2.gpsonextra.net/xtra.bin
+ XTRA_SERVER_3=http://xtra3.gpsonextra.net/xtra.bin
+ SUPL_HOST=supl.google.com
+ SUPL_PORT=7276
++INTERMEDIATE_POS=1
++ACCURACY_THRES=0
++DEFAULT_AGPS_ENABLE=true
+-- 
+1.8.1.2
+

@@ -1,0 +1,9 @@
+# SELinux
+bin/auditd
+
+# Random build cruft
+lib/crtbegin_so.o
+lib/crtend_so.o
+
+# Recovery
+etc/recovery-resource.dat

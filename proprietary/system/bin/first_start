@@ -1,0 +1,26 @@
+#!/system/xbin/sh
+#
+# first start
+######################
+
+
+export PATH=/system/xbin:/system/bin:/sbin/:bin
+
+# Cocktail BT/wifi mac address loader
+
+FLAG="/system/etc/bluetooth/bdaddr.txt"
+if [ ! -f $FLAG ]; then
+
+mount -o remount,rw /
+mkdir /tmp
+
+cp /system/xbin/busybox /tmp/
+cp /system/bin/wireless_settings.sh /tmp/
+cd /tmp/
+for i in `busybox --list` ; do ln -s /tmp/busybox $i ; done
+exec /tmp/sh -c /tmp/wireless_settings.sh
+
+   touch $FLAG
+else
+   echo "Do nothing"
+fi

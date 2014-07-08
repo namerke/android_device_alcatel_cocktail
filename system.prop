@@ -1,0 +1,68 @@
+#
+# system.prop for OT-995
+#
+
+# USB
+persist.sys.usb.config=mass_storage,adb
+persist.service.adb.enable=1
+
+# Increase speed for UMS transfer
+ro.vold.umsdirtyratio=50
+
+# Radio Interface Layer (RIL)
+ro.telephony.ril_class=HTCQualcommRIL
+rild.libpath=/system/lib/libril-qc-qmi-1.so
+rild.libargs=-d /dev/smd0
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
+ril.subscription.types=NV,RUIM
+ro.telephony.default_network=3
+
+ro.telephony.call_ring.multiple=false
+ro.telephony.call_ring.delay=3000
+
+# Baseband
+gsm.version.baseband=M8255A- AABBQOLYM4.1.4007
+
+# Bluetooth
+ro.bt.bdaddr_path=/system/etc/bluetooth/bdaddr.txt
+
+# qcom display
+debug.sf.hw=1
+
+# Memory
+ro.ksm.default=1
+ro.config.low_ram=true
+
+# system prop for multi rild (DSDS case)
+ro.multi.rild=false
+
+# system props for the data modules
+ro.use_data_netmgrd=true
+
+# The OpenGL ES API level that is natively supported by this device.
+# This is a 16.16 fixed point number.
+ro.opengles.version=131072
+
+# USB notification
+persist.adb.notify=0
+
+# LCD
+ro.sf.lcd_density=240
+
+# velocity
+ro.max.fling_velocity=4000
+
+# HACK: Use old Webkit for pmem compatibility
+persist.webview.provider=classic
+
+# wifi
+wifi.interface=wlan0
+wifi.supplicant_scan_interval=15
